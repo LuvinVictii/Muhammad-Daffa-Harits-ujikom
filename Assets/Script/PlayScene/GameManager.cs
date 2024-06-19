@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public TMP_Text scoreText;
     public TMP_Text timeText;
+    public TMP_Text finalScoreText;
+    public Camera mainCamera;
+    public Camera gameOverCamera;
 
     public float duration = 60f;
     private float timer;
@@ -32,6 +35,8 @@ public class GameManager : MonoBehaviour
         timer = duration;
         score = 0;
         isGameOver = false;
+        mainCamera.enabled = true;
+        gameOverCamera.enabled = false;
     }
 
     // Update is called once per frame
@@ -49,6 +54,12 @@ public class GameManager : MonoBehaviour
                 timeText.text = "Time: 0";
                 scoreText.text = "Score: " + score;
             }
+        }
+        if (isGameOver)
+        {
+            mainCamera.enabled = false;
+            gameOverCamera.enabled = true;
+            finalScoreText.text = "Final Score: " + score;
         }
     }
 
