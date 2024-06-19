@@ -1588,10 +1588,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2064037921}
   timeText: {fileID: 1633836249}
-  finalScoreText: {fileID: 0}
+  finalScoreText: {fileID: 2046142715}
   mainCamera: {fileID: 963194227}
   gameOverCamera: {fileID: 265860945}
-  duration: 10
+  duration: 60
   isGameOver: 0
 --- !u!1 &2045649885
 GameObject:
